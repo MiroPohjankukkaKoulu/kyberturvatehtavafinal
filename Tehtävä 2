@@ -1,1 +1,123 @@
+2. Työskentelyn vaiheet ja sisältö
+Jaettu kolmeen osaan
 
+
+Osa 1: Riskienhallinta ja nykytilan analyysi
+Tavoite: Opiskelija hallitsee kyberturvariskejä
+
+Nykytilan kuvaus: Dokumentoi yrityksen laitteet, verkkoratkaisut ja tärkeät tietoaineistot.
+
+Nykytilan kartoitus: Tilitoimisto Tarkka Oy
+
+ 
+Dokumentin tarkoitus: Kartoittaa yrityksen IT-infrastruktuuri ja tunnistaa tietoturvaan vaikuttavat omaisuuserät ennen riskianalyysiä.
+
+1. Laitteet (Hardware)
+
+Yrityksen laitekanta on kirjava ja koostuu sekä yritystason että kuluttajatason laitteista.
+
+Tietokone 1 (Toimitusjohtaja Seppo)
+    Malli: Lenovo ThinkPad E15 (n. 4 v vanha)
+    OS: Windows 10 Pro
+    Huomio: Kone koettu hitaaksi, päivityshistoria epäselvä.
+
+Tietokone 2 (Kirjanpitäjä Anne)
+    Malli: HP ProBook 450
+    OS: Windows 11
+    Huomio: Käytetään myös kotona etätöihin ja henkilökohtaiseen surffailuun.
+
+Tietokone 3 (Harjoittelija Joni)
+    Malli: Asus Vivobook (Kuluttajamalli)
+    OS: Windows 11 Home
+    Huomio: Koneelle asennettu pelejä ja useita ilmaisohjelmia ilman valvontaa.
+
+Oheislaitteet
+    Tulostin: Canon i-SENSYS (Kytketty langattomaan verkkoon).
+    Varmuuskopiointi: 1 kpl ulkoinen USB-kovalevy (Seagate 1TB). Säilytetään toimiston hyllyssä, ei salausta.
+
+2. Verkkoratkaisut (Network)
+
+Verkko on toteutettu yksinkertaisella mobiililaajakaistalla ilman segmentointia.
+
+Reititin: Huawei B535 4G-reititin.
+Yhteyden tyyppi: 4G-mobiilidata.
+Etäyhteydet: Ei VPN-ratkaisua käytössä.
+
+Langaton verkko (WLAN) tiedot
+| Asetus | Arvo | Huomio |
+| --- | --- | --- |
+| SSID | `Tarkka_Net` | Verkon nimi näkyy kaikille naapureille. |
+| Salaus | WPA2-Personal | Perustason salaus. |
+| Salasana | `Salasana1234` | KRIITTINEN: Salasana on teipattu laitteen kylkeen ja se on erittäin helppo arvata. |
+| vierasverkko | Ei käytössä | Asiakkaat ja työntekijät samassa verkossa. |
+
+
+3. Ohjelmistot (Software)
+
+* **Toimisto:** Microsoft 365 Business Standard (Outlook, Teams, OneDrive, Word, Excel).
+* **Taloushallinto:** Selainpohjainen pilvipalvelu (SaaS).
+* **Tietoturva:** Windows Defender (Oletusasetukset, ei keskitettyä hallintaa).
+* **Selaimet:** Google Chrome (Työntekijät tallentaneet salasanoja selaimen muistiin).
+
+---
+
+## 4. Tärkeät tietoaineistot (Data Assets)
+
+Alla on listattu tiedot, joiden luottamuksellisuus ja eheys ovat toiminnalle kriittisiä.
+
+| Tietoaineisto | Sijainti | Tietosisältö | Riskiarvio |
+| :--- | :--- | :--- | :--- |
+| **Asiakasrekisteri** | Sepon työpöytä (Desktop) | Yritysten nimet, Y-tunnukset, yhteyshenkilöt. | **Korkea:** Ei automaattista varmuuskopiota, altis laiterikolle. |
+| **Palkka-aineistot** | Pilvipalvelu + Annen kone (PDF) | Henkilötunnukset (HETU), tilinumerot, palkat. | **Kriittinen:** Sisältää GDPR:n alaista arkaluontoista tietoa. |
+| **Kirjanpidon tositteet** | OneDrive / Verkkolevy | Kuitit, laskut, tiliotteet. | **Keskitaso:** Sisältää liikesalaisuuksia. |
+| **Sähköpostit** | Microsoft 365 (Pilvi) | Asiakaskommunikaatio, sopimukset. | **Korkea:** MFA puuttuu -> tilimurron riski suuri. |
+
+
+
+Uhkamallinnus: Tunnista yrityksen toimintaan kohdistuvat kyberuhat (esim. kiristyshaittaohjelmat, tietojen kalastelu, suojaamaton verkko).
+
+Riskianalyysi: Laadi riskimatriisi, jossa arvioit tunnistettujen uhkien todennäköisyyttä ja vaikuttavuutta. Priorisoi 3–5 kriittisintä riskiä, jotka vaativat välittömiä toimenpiteitä.
+
+Osa 2: Suojautumiskeinojen toteutus (Tekninen toteutus)
+Tavoite: Opiskelija osaa käyttää kyberuhkien hallinta- ja suojautumiskeinoja.
+
+Valitse riskianalyysin perusteella kriittisimmät kohteet ja toteuta niihin tekniset suojaukset. Työ voidaan tehdä oikeaan ympäristöön tai simuloida laboratorioympäristössä/virtuaalikoneilla.
+
+Toimenpiteet (vähintään nämä):
+
+Verkon suojaus: Langattoman verkon salauksen vahvistaminen ja erillisen vierasverkon (Guest Wi-Fi) konfigurointi.
+
+Identiteetinhallinta: Monivaiheisen tunnistautumisen (MFA) käyttöönotto sähköpostiin tai pilvipalveluun.
+
+Päätelaitesuojaus: Virustorjunnan ja palomuurin asetusten tarkistus sekä käyttöjärjestelmän päivitysten automatisointi.
+
+Varmuuskopiointi: Automaattisen varmuuskopioinnin määrittäminen pilvipalveluun (esim. OneDrive/Google Drive) suojaamaan tiedon häviämiseltä.
+
+Dokumentointi: Ota kuvakaappaukset (screenshots) asetuksista "ennen ja jälkeen" muutosten.
+
+Osa 3: Kyberturvallisuuden edistäminen ja ohjeistus
+Tavoite: Opiskelija edistää kyberturvallisuusratkaisuja.
+
+Henkilöstöohje: Laadi yrityksen henkilöstölle selkeä, ei-tekninen "Tietoturvan huoneentaulu" (1 sivu). Ohjeista siinä salasanahygienia, sähköpostihuijausten tunnistaminen ja toiminta poikkeustilanteessa.
+
+Raportointi: Kirjoita lyhyt yhteenveto tehdyistä toimenpiteistä ja niiden vaikutuksesta yrityksen turvallisuustasoon.
+
+Osa 3: Kyberturvallisuuden edistäminen ja ohjeistus
+Tavoite: Opiskelija edistää kyberturvallisuusratkaisuja.
+
+Riskianalyysitaulukko (Excel tai PDF).
+
+Tekninen dokumentaatio: Raportti, joka sisältää kuvakaappaukset ja selostukset tehdyistä teknisistä muutoksista (MFA, verkko, varmuuskopiot).
+
+Henkilöstön tietoturvaohje (PDF).
+
+Opettajalle / Arvioijalle:
+Tämä näyttötehtävä on suunniteltu osoittamaan seuraavat tutkinnon osan ammattitaitovaatimukset:
+
+Opiskelija osaa kartoittaa organisaation kyberriskejä.
+
+Opiskelija osaa ottaa käyttöön perustason hallintakeinoja (tekninen suojaus).
+
+Opiskelija osaa viestiä tietoturvasta ja ohjeistaa loppukäyttäjiä.
+
+Haluatko, että luon sinulle valmiiksi tuon "Henkilöstön tietoturvaohjeen" tekstisisällön tai pohjan riskianalyysitaulukolle?
