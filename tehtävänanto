@@ -7,7 +7,6 @@ Toimeksiantajana on pieni taloushallinnon yritys, Tilitoimisto Tarkka Oy, joka k
 Tavoitteena on kartoittaa yrityksen nykytilan riskit, suunnitella ja toteuttaa tarvittavat tekniset suojaukset sekä ohjeistaa henkilöstöä turvallisiin toimintatapoihin.
 
 2. Työskentelyn vaiheet ja sisältö
-Tehtävä koostuu kolmesta osiosta, jotka dokumentoidaan näyttösuoritukseen.
 
 Osa 1: Riskienhallinta ja nykytilan analyysi
 Tavoite: Opiskelija hallitsee kyberturvariskejä.
@@ -23,17 +22,6 @@ Tavoite: Opiskelija osaa käyttää kyberuhkien hallinta- ja suojautumiskeinoja.
 
 Valitse riskianalyysin perusteella kriittisimmät kohteet ja toteuta niihin tekniset suojaukset. Työ voidaan tehdä oikeaan ympäristöön tai simuloida laboratorioympäristössä/virtuaalikoneilla.
 
-Toimenpiteet (vähintään nämä):
-
-Verkon suojaus: Langattoman verkon salauksen vahvistaminen ja erillisen vierasverkon (Guest Wi-Fi) konfigurointi.
-
-Identiteetinhallinta: Monivaiheisen tunnistautumisen (MFA) käyttöönotto sähköpostiin tai pilvipalveluun.
-
-Päätelaitesuojaus: Virustorjunnan ja palomuurin asetusten tarkistus sekä käyttöjärjestelmän päivitysten automatisointi.
-
-Varmuuskopiointi: Automaattisen varmuuskopioinnin määrittäminen pilvipalveluun (esim. OneDrive/Google Drive) suojaamaan tiedon häviämiseltä.
-
-Dokumentointi: Ota kuvakaappaukset (screenshots) asetuksista "ennen ja jälkeen" muutosten.
 
 Osa 3: Kyberturvallisuuden edistäminen ja ohjeistus
 Tavoite: Opiskelija edistää kyberturvallisuusratkaisuja.
@@ -47,7 +35,7 @@ Arviointia varten opiskelija toimittaa seuraavat dokumentit:
 
 Riskianalyysitaulukko (Excel tai PDF).
 
-Tekninen dokumentaatio: Raportti, joka sisältää kuvakaappaukset ja selostukset tehdyistä teknisistä muutoksista (MFA, verkko, varmuuskopiot).
+Tekninen dokumentaatio: Raportti, joka sisältää selostukset tehdyistä teknisistä muutoksista (MFA, verkko, varmuuskopiot).
 
 Henkilöstön tietoturvaohje (PDF).
 
