@@ -1,0 +1,38 @@
+Kohdeyritys: Tilitoimisto Tarkka Oy
+Yrityksen kuvaus: Tilitoimisto Tarkka Oy on pieni, kolmen hengen yritys, joka hoitaa paikallisten yritysten kirjanpitoa ja palkanlaskentaa. He käsittelevät erittäin arkaluontoista tietoa (asiakkaiden pankkitietoja, henkilötunnuksia, palkkalistoja).
+
+Henkilöstö:
+
+Seppo (Toimitusjohtaja): Hoitaa asiakkuuksia. Ei ole tekninen, arvostaa helppoutta. Käyttää samaa salasanaa ("Seppo123") lähes kaikkialla.
+
+Anne (Kirjanpitäjä): Tekee tarkkaa työtä, mutta tekee välillä etätöitä kotoa omalla läppärillään.
+
+Joni (Harjoittelija): Nuori ja nopea, latailee välillä koneelle ilmaisohjelmia netistä helpottaakseen työtään.
+
+Nykytilan IT-infrastruktuuri (Lähtötilanne):
+
+Laitteet:
+
+Toimistolla on 3 Windows-läppäriä ja yksi vanha pöytäkone tulostusta varten.
+
+Käyttöjärjestelminä sekaisin Windows 10 ja 11. Yhden koneen Windows-lisenssi on vanhentunut/aktivoimatta.
+
+Ohjelmistot:
+
+Käytössä Microsoft 365 (sähköposti, Teams, OneDrive), mutta tietoturva-asetukset ovat oletusarvoilla.
+
+Taloushallinto-ohjelmisto (pilvipohjainen).
+
+Verkko:
+
+Toimistolla on 4G-reititin.
+
+Wi-Fi-verkon nimi on "Tarkka_Net" ja salasana on teipattu reitittimen kylkeen (ja se on "Salasana1234").
+
+Asiakkaat käyttävät samaa Wi-Fi-verkkoa käydessään toimistolla.
+
+Tiedon tallennus:
+
+Suurin osa tiedostoista on työntekijöiden omilla työpöydillä (Desktop) tai "Omat tiedostot" -kansiossa.
+
+Varmuuskopiointi: Seppo ottaa kerran kuukaudessa tärkeimmät tiedostot ulkoiselle USB-kovalevylle, jos muistaa. Kovalevyä säilytetään toimiston pöydällä.
