@@ -12,6 +12,8 @@ Nykytilan kartoitus: Tilitoimisto Tarkka Oy
  
 Dokumentin tarkoitus: Kartoittaa yrityksen IT-infrastruktuuri ja tunnistaa tietoturvaan vaikuttavat omaisuuserät ennen riskianalyysiä.
 
+
+
 1. Laitteet (Hardware)
 
 Yrityksen laitekanta on kirjava ja koostuu sekä yritystason että kuluttajatason laitteista.
@@ -35,6 +37,8 @@ Oheislaitteet
     Tulostin: Canon i-SENSYS (Kytketty langattomaan verkkoon).
     Varmuuskopiointi: 1 kpl ulkoinen USB-kovalevy (Seagate 1TB). Säilytetään toimiston hyllyssä, ei salausta.
 
+
+
 2. Verkkoratkaisut (Network)
 
 Verkko on toteutettu yksinkertaisella mobiililaajakaistalla ilman segmentointia.
@@ -52,38 +56,54 @@ Langaton verkko (WLAN) tiedot
 | vierasverkko | Ei käytössä | Asiakkaat ja työntekijät samassa verkossa. |
 
 
+
 3. Ohjelmistot (Software)
 
-* **Toimisto:** Microsoft 365 Business Standard (Outlook, Teams, OneDrive, Word, Excel).
-* **Taloushallinto:** Selainpohjainen pilvipalvelu (SaaS).
-* **Tietoturva:** Windows Defender (Oletusasetukset, ei keskitettyä hallintaa).
-* **Selaimet:** Google Chrome (Työntekijät tallentaneet salasanoja selaimen muistiin).
+Toimisto: Microsoft 365 Business Standard (Outlook, Teams, OneDrive, Word, Excel).
+Taloushallinto: Selainpohjainen pilvipalvelu (SaaS).
+Tietoturva: Windows Defender (Oletusasetukset, ei keskitettyä hallintaa).
+Selaimet: Google Chrome (Työntekijät tallentaneet salasanoja selaimen muistiin).
 
----
 
-## 4. Tärkeät tietoaineistot (Data Assets)
+
+4. Tärkeät tietoaineistot (Data Assets)
 
 Alla on listattu tiedot, joiden luottamuksellisuus ja eheys ovat toiminnalle kriittisiä.
 
 | Tietoaineisto | Sijainti | Tietosisältö | Riskiarvio |
 | :--- | :--- | :--- | :--- |
-| **Asiakasrekisteri** | Sepon työpöytä (Desktop) | Yritysten nimet, Y-tunnukset, yhteyshenkilöt. | **Korkea:** Ei automaattista varmuuskopiota, altis laiterikolle. |
-| **Palkka-aineistot** | Pilvipalvelu + Annen kone (PDF) | Henkilötunnukset (HETU), tilinumerot, palkat. | **Kriittinen:** Sisältää GDPR:n alaista arkaluontoista tietoa. |
-| **Kirjanpidon tositteet** | OneDrive / Verkkolevy | Kuitit, laskut, tiliotteet. | **Keskitaso:** Sisältää liikesalaisuuksia. |
-| **Sähköpostit** | Microsoft 365 (Pilvi) | Asiakaskommunikaatio, sopimukset. | **Korkea:** MFA puuttuu -> tilimurron riski suuri. |
+| Asiakasrekisteri | Sepon työpöytä (Desktop) | Yritysten nimet, Y-tunnukset, yhteyshenkilöt. | Korkea: Ei automaattista varmuuskopiota, altis laiterikolle. |
+| Palkka-aineistot | Pilvipalvelu + Annen kone (PDF) | Henkilötunnukset (HETU), tilinumerot, palkat. | Kriittinen: Sisältää GDPR:n alaista arkaluontoista tietoa. |
+| Kirjanpidon tositteet | OneDrive / Verkkolevy | Kuitit, laskut, tiliotteet. | Keskitaso: Sisältää liikesalaisuuksia. |
+| Sähköpostit | Microsoft 365 (Pilvi) | Asiakaskommunikaatio, sopimukset. | Korkea: MFA puuttuu -> tilimurron riski suuri. |
 
 
 
-Uhkamallinnus: Tunnista yrityksen toimintaan kohdistuvat kyberuhat (esim. kiristyshaittaohjelmat, tietojen kalastelu, suojaamaton verkko).
+Uhkamallinnus: Tunnista yrityksen toimintaan kohdistuvat kyberuhat:
 
-Riskianalyysi: Laadi riskimatriisi, jossa arvioit tunnistettujen uhkien todennäköisyyttä ja vaikuttavuutta. Priorisoi 3–5 kriittisintä riskiä, jotka vaativat välittömiä toimenpiteitä.
+Perustuen nykytilan analyysiin, Tilitoimisto Tarkka Oy:n toimintaan kohdistuvat seuraavat merkittävät kyberuhat.
+
+A. Ihmisiin ja identiteettiin kohdistuvat uhat
+Identiteettivarkaus (Tilin kaappaus): Koska monivaiheinen tunnistautuminen (MFA) puuttuu, hyökkääjä tarvitsee vain yhden työntekijän salasanan päästäkseen käsiksi yrityksen sähköpostiin ja OneDrive-tiedostoihin.
+Tietojen kalastelu (Phishing): Työntekijöitä houkutellaan klikkaamaan haittalinkkejä tai luovuttamaan pankkitunnuksia valesähköposteilla.
+
+B. Tekniset ja verkkoon liittyvät uhat
+Kiristyshaittaohjelmat (Ransomware): Riski on korkea, koska harjoittelijan koneella on valvomatonta ohjelmistojen latausta. Hyökkäys salaa asiakasdatan ja vaatii lunnaita.
+Saastunut vieraslaite: Asiakkaiden ja työntekijöiden laitteet ovat samassa suojaamattomassa verkossa. Haittaohjelma voi "hypätä" koneesta toiseen lähiverkossa.
+Man-in-the-Middle (MitM): Heikko Wi-Fi-salaus mahdollistaa verkkoliikenteen salakuuntelun lähietäisyydeltä.
+
+C. Fyysiset uhat ja vahingot
+Laiterikko tai onnettomuus: Tulipalo, vesivahinko tai sähköpiikki tuhoaa toimistolla olevat laitteet.
+Varmuuskopion menetys: Koska varmuuskopio on fyysinen ja samassa tilassa tietokoneiden kanssa, se tuhoutuu samassa onnettomuudessa (Single Point of Failure).
+Kannettavan varkaus: Jos suojaamaton (salaamaton) tietokone varastetaan, varkaalla on pääsy kaikkeen paikalliseen dataan ja selaimeen tallennettuihin salasanoihin.
+
+
 
 Osa 2: Suojautumiskeinojen toteutus (Tekninen toteutus)
 Tavoite: Opiskelija osaa käyttää kyberuhkien hallinta- ja suojautumiskeinoja.
 
-Valitse riskianalyysin perusteella kriittisimmät kohteet ja toteuta niihin tekniset suojaukset. Työ voidaan tehdä oikeaan ympäristöön tai simuloida laboratorioympäristössä/virtuaalikoneilla.
-
-Toimenpiteet (vähintään nämä):
+Toimenpiteet:
+esim:
 
 Verkon suojaus: Langattoman verkon salauksen vahvistaminen ja erillisen vierasverkon (Guest Wi-Fi) konfigurointi.
 
@@ -93,19 +113,21 @@ Päätelaitesuojaus: Virustorjunnan ja palomuurin asetusten tarkistus sekä käy
 
 Varmuuskopiointi: Automaattisen varmuuskopioinnin määrittäminen pilvipalveluun (esim. OneDrive/Google Drive) suojaamaan tiedon häviämiseltä.
 
-Dokumentointi: Ota kuvakaappaukset (screenshots) asetuksista "ennen ja jälkeen" muutosten.
+
 
 Osa 3: Kyberturvallisuuden edistäminen ja ohjeistus
 Tavoite: Opiskelija edistää kyberturvallisuusratkaisuja.
 
-Henkilöstöohje: Laadi yrityksen henkilöstölle selkeä, ei-tekninen "Tietoturvan huoneentaulu" (1 sivu). Ohjeista siinä salasanahygienia, sähköpostihuijausten tunnistaminen ja toiminta poikkeustilanteessa.
+Henkilöstöohje: Laadi yrityksen henkilöstölle selkeä, ei-tekninen "Tietoturvan ohje" (1 sivu). Ohjeista siinä salasanahygienia, sähköpostihuijausten tunnistaminen ja toiminta poikkeustilanteessa.
 
 Raportointi: Kirjoita lyhyt yhteenveto tehdyistä toimenpiteistä ja niiden vaikutuksesta yrityksen turvallisuustasoon.
 
-Osa 3: Kyberturvallisuuden edistäminen ja ohjeistus
+
+
+Osa 4: Kyberturvallisuuden edistäminen ja ohjeistus
 Tavoite: Opiskelija edistää kyberturvallisuusratkaisuja.
 
-Riskianalyysitaulukko (Excel tai PDF).
+Riskianalyysitaulukko
 
 Tekninen dokumentaatio: Raportti, joka sisältää kuvakaappaukset ja selostukset tehdyistä teknisistä muutoksista (MFA, verkko, varmuuskopiot).
 
@@ -120,4 +142,3 @@ Opiskelija osaa ottaa käyttöön perustason hallintakeinoja (tekninen suojaus).
 
 Opiskelija osaa viestiä tietoturvasta ja ohjeistaa loppukäyttäjiä.
 
-Haluatko, että luon sinulle valmiiksi tuon "Henkilöstön tietoturvaohjeen" tekstisisällön tai pohjan riskianalyysitaulukolle?
