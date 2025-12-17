@@ -1,0 +1,63 @@
+NÄYTTÖTEHTÄVÄ: Pk-yrityksen kyberturvallisuuden kehittäminen
+Tutkinnon osa: Kyberuhkien hallinta- ja suojautumiskeinot (30 osp) Kohdekohde: Tilitoimisto Tarkka Oy (Case-simulaatio) Opiskelija: [Sinun Nimesi]
+
+1. Tehtävän tausta ja tavoite
+Toimeksiantajana on pieni taloushallinnon yritys, Tilitoimisto Tarkka Oy, joka käsittelee arkaluontoista asiakastietoa. Yrityksen IT-infra on rakennettu ilman suunnitelmallista tietoturvaa, ja siinä on havaittu selkeitä haavoittuvuuksia.
+
+Tavoitteena on kartoittaa yrityksen nykytilan riskit, suunnitella ja toteuttaa tarvittavat tekniset suojaukset sekä ohjeistaa henkilöstöä turvallisiin toimintatapoihin.
+
+2. Työskentelyn vaiheet ja sisältö
+Tehtävä koostuu kolmesta osiosta, jotka dokumentoidaan näyttösuoritukseen.
+
+Osa 1: Riskienhallinta ja nykytilan analyysi
+Tavoite: Opiskelija hallitsee kyberturvariskejä.
+
+Nykytilan kuvaus: Dokumentoi yrityksen laitteet, verkkoratkaisut ja tärkeät tietoaineistot.
+
+Uhkamallinnus: Tunnista yrityksen toimintaan kohdistuvat kyberuhat (esim. kiristyshaittaohjelmat, tietojen kalastelu, suojaamaton verkko).
+
+Riskianalyysi: Laadi riskimatriisi, jossa arvioit tunnistettujen uhkien todennäköisyyttä ja vaikuttavuutta. Priorisoi 3–5 kriittisintä riskiä, jotka vaativat välittömiä toimenpiteitä.
+
+Osa 2: Suojautumiskeinojen toteutus (Tekninen toteutus)
+Tavoite: Opiskelija osaa käyttää kyberuhkien hallinta- ja suojautumiskeinoja.
+
+Valitse riskianalyysin perusteella kriittisimmät kohteet ja toteuta niihin tekniset suojaukset. Työ voidaan tehdä oikeaan ympäristöön tai simuloida laboratorioympäristössä/virtuaalikoneilla.
+
+Toimenpiteet (vähintään nämä):
+
+Verkon suojaus: Langattoman verkon salauksen vahvistaminen ja erillisen vierasverkon (Guest Wi-Fi) konfigurointi.
+
+Identiteetinhallinta: Monivaiheisen tunnistautumisen (MFA) käyttöönotto sähköpostiin tai pilvipalveluun.
+
+Päätelaitesuojaus: Virustorjunnan ja palomuurin asetusten tarkistus sekä käyttöjärjestelmän päivitysten automatisointi.
+
+Varmuuskopiointi: Automaattisen varmuuskopioinnin määrittäminen pilvipalveluun (esim. OneDrive/Google Drive) suojaamaan tiedon häviämiseltä.
+
+Dokumentointi: Ota kuvakaappaukset (screenshots) asetuksista "ennen ja jälkeen" muutosten.
+
+Osa 3: Kyberturvallisuuden edistäminen ja ohjeistus
+Tavoite: Opiskelija edistää kyberturvallisuusratkaisuja.
+
+Henkilöstöohje: Laadi yrityksen henkilöstölle selkeä, ei-tekninen "Tietoturvan huoneentaulu" (1 sivu). Ohjeista siinä salasanahygienia, sähköpostihuijausten tunnistaminen ja toiminta poikkeustilanteessa.
+
+Raportointi: Kirjoita lyhyt yhteenveto tehdyistä toimenpiteistä ja niiden vaikutuksesta yrityksen turvallisuustasoon.
+
+3. Arvioitavat tuotokset (Mitä palautetaan?)
+Arviointia varten opiskelija toimittaa seuraavat dokumentit:
+
+Riskianalyysitaulukko (Excel tai PDF).
+
+Tekninen dokumentaatio: Raportti, joka sisältää kuvakaappaukset ja selostukset tehdyistä teknisistä muutoksista (MFA, verkko, varmuuskopiot).
+
+Henkilöstön tietoturvaohje (PDF).
+
+Opettajalle / Arvioijalle:
+Tämä näyttötehtävä on suunniteltu osoittamaan seuraavat tutkinnon osan ammattitaitovaatimukset:
+
+Opiskelija osaa kartoittaa organisaation kyberriskejä.
+
+Opiskelija osaa ottaa käyttöön perustason hallintakeinoja (tekninen suojaus).
+
+Opiskelija osaa viestiä tietoturvasta ja ohjeistaa loppukäyttäjiä.
+
+Haluatko, että luon sinulle valmiiksi tuon "Henkilöstön tietoturvaohjeen" tekstisisällön tai pohjan riskianalyysitaulukolle?
