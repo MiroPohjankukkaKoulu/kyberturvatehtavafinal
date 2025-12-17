@@ -1,0 +1,101 @@
+1. Tehtävän tausta ja tavoite
+Toimeksiantajana on pieni taloushallinnon yritys, Tilitoimisto Tarkka Oy, joka käsittelee arkaluontoista asiakastietoa. Yrityksen IT-infra on rakennettu ilman suunnitelmallista tietoturvaa, ja siinä on havaittu selkeitä haavoittuvuuksia.
+
+Tavoitteena on kartoittaa yrityksen nykytilan riskit, suunnitella ja toteuttaa tarvittavat tekniset suojaukset sekä ohjeistaa henkilöstöä turvallisiin toimintatapoihin.
+
+
+
+Vastaus: 
+Vaihe 1: Nykytilan kartoitus ja riskianalyysi
+Tässä vaiheessa etsin heikkoja kohtia.
+
+* Teen inventaario (Mitä suojataan?): 
+      Kirjaan ylös laitteet yms
+      Laitteet: "3 kpl kannettavia (Lenovo), 1 pöytäkone, 1 4G-reititin (Huawei)."
+      Tieto: "Asiakasrekisteri (Excel), Palkkalaskelmat (PDF), Verkkopankkitunnukset."
+      Ohjelmistot: "Microsoft 365 Business, Taloushallinta.fi -pilvipalvelu."
+
+* Tunnista uhat (Mitä voi tapahtua?): Mietin "worst case scenario" -tilanteita yrityksen arjessa.
+      Esimerkki: "Seppo käyttää samaa salasanaa Facebookissa ja yrityksen sähköpostissa. Jos Facebook-tunnus vuotaa, hakkeri pääsee yrityksen sähköpostiin."
+      Esimerkki: "Asiakas tulee toimistolle, yhdistää saastuneen koneensa Wi-Fiin ja kiristyshaittaohjelma leviää Annen koneelle."
+
+* Luo riskimatriisi: Arvioi uhat asteikolla 1–5.
+
+| Uhka | Todennäköisyys (1-5) | Vaikuttavuus (1-5) | Toimenpide |
+| ------------- | ------------- |-|-|
+| Tietojen kalastelu (Phishing) | 4 | 5 | Koulutus + MFA käyttöön | 
+| Vieras saastuttaa verkon | 3 | 4 | Vierasverkon (Guest Wi-Fi) luonti |
+| Laitevarkaus toimistolta | 2 | 4 | Levyn salaus (BitLocker) |
+
+uhka	Todennäköisyys (1-5)	Vaikuttavuus (1-5)	Riskiarvo (x*y)	Toimenpide
+Tietojen kalastelu (Phishing)	4	5		Koulutus + MFA käyttöön
+Vieras saastuttaa verkon	3	4	 	Vierasverkon (Guest Wi-Fi) luonti
+Laitevarkaus toimistolta	2	4 	Levyn salaus (BitLocker)
+
+Vie Sheetsiin
+
+Vaihe 2: Teknisten suojauksien toteutus
+Nyt korjaat suurimmat riskit. Tärkeää: Ota kuvakaappaus (Screenshot) jokaisesta vaiheesta raporttiasi varten!
+
+1. Sähköpostin ja tilien turvaaminen (MFA): Tämä on tehokkain yksittäinen toimi.
+
+Miten teet: Kirjaudu Microsoft 365 Admin Centeriin (tai simuloi tämä omalla tililläsi). Etsi kohta Active Users -> Multi-factor authentication.
+
+Toiminta: Pakota MFA päälle Sepolle ja Annelle.
+
+Testaus: Kirjaudu tilille ja varmista, että puhelimeen tulee vahvistuspyyntö (Microsoft Authenticator).
+
+2. Verkon turvaaminen: Estetään asiakkaita pääsemästä yrityksen sisäverkkoon.
+
+Miten teet: Kirjaudu reitittimen hallintasivulle (yleensä 192.168.1.1 tms.).
+
+Toiminta A: Vaihda pääverkon (WLAN) salasana vahvaan (esim. "Tarkka2024!Turva").
+
+Toiminta B: Etsi asetus "Guest Network" (Vierasverkko) ja laita se päälle. Anna sille eri salasana.
+
+Selitys:
+
+Kuvassa näkyy periaate: Vierasverkko (Guest) on eristetty yrityksen omista laitteista.
+
+3. Päätelaitteiden suojaus: Varmistetaan, että koneet ovat turvassa.
+
+Päivitykset: Mene Windowsin asetuksiin -> Windows Update. Tarkista päivitykset ja aseta "Aktiivinen aika" (Active Hours) niin, ettei kone käynnisty kesken työpäivän.
+
+Virustorjunta: Avaa Windows Security (Tietoturva). Varmista, että "Virus & threat protection" on vihreällä. Laita "Ransomware protection" -> "Controlled folder access" päälle tärkeille kansioille.
+
+4. Varmuuskopiointi (OneDrive):
+
+Miten teet: Klikkaa OneDriven pilvi-ikonia kellon vierestä -> Asetukset -> Sync and backup -> Manage backup.
+
+Toiminta: Valitse Desktop, Documents ja Pictures. Nyt työpöydän tiedostot menevät automaattisesti pilveen turvaan.
+
+Vaihe 3: Henkilöstön ohjeistaminen
+Tekniikka ei auta, jos ihminen tekee virheen. Laadi "Tietoturvan huoneentaulu".
+
+Kirjoita A4-kokoinen ohje, jossa on selkeät ranskalaiset viivat. Älä käytä nörttikieltä.
+
+Esimerkki sisällöstä (kopioi ja muokkaa tämä):
+
+TIETOTURVAOHJE - TILITOIMISTO TARKKA OY
+
+1. Salasanat ovat henkilökohtaisia
+
+Älä koskaan kerro salasanaasi puhelimessa tai sähköpostissa, vaikka kysyjä väittäisi olevansa IT-tuesta.
+
+Käytä työkoneella eri salasanaa kuin vapaa-ajan palveluissa.
+
+2. Varo sähköpostihuijauksia
+
+Jos saat laskun tai linkin oudosta osoitteesta, älä avaa sitä.
+
+Jos viestissä on kova kiire ("Toimi heti!"), se on todennäköisesti huijaus. Kysy ensin Sepolta.
+
+3. Vieraat ja verkko
+
+Asiakkaat saavat käyttää vain "Tarkka_Vieras" -verkkoa. Älä anna heille pääverkon salasanaa.
+
+4. Jos vahinko sattuu
+
+Jos epäilet klikanneesi haittalinkkiä, irrota tietokone heti verkosta (ota johto irti tai katkaise Wi-Fi) ja ilmoita johdolle välittömästi.
+
+Mitä tehdään seuraavaksi? Haluatko, että autan sinua laatimaan tuon Riskimatriisin (Vaihe 1) valmiiksi taulukoksi, jonka voit kopioida suoraan näyttösuunnitelmaasi?
