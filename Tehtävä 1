@@ -22,7 +22,7 @@ Tässä vaiheessa etsin heikkoja kohtia.
 * Luo riskimatriisi: Arvioi uhat asteikolla 1–5.
 
 | Uhka | Todennäköisyys (1-5) | Vaikuttavuus (1-5) | Toimenpide |
-| ----------------------------- | - | - | ---------------------- |
+| ---- | -------------------- | ------------------ | ---------- |
 | Tietojen kalastelu (Phishing) | 4 | 5 | Koulutus + MFA käyttöön | 
 | Vieras saastuttaa verkon | 3 | 4 | Vierasverkon (Guest Wi-Fi) luonti |
 | Laitevarkaus toimistolta | 2 | 4 | Levyn salaus (BitLocker) |
