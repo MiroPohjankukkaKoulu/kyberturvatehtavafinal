@@ -9,17 +9,17 @@ Vastaus:
 Vaihe 1: Nykytilan kartoitus ja riskianalyysi
 Tässä vaiheessa etsin heikkoja kohtia.
 
-* Teen inventaario (Mitä suojataan?): 
+Teen inventaario (Mitä suojataan?): 
       Kirjaan ylös laitteet yms
       Laitteet: "3 kpl kannettavia (Lenovo), 1 pöytäkone, 1 4G-reititin (Huawei)."
       Tieto: "Asiakasrekisteri (Excel), Palkkalaskelmat (PDF), Verkkopankkitunnukset."
       Ohjelmistot: "Microsoft 365 Business, Taloushallinta.fi -pilvipalvelu."
 
-* Tunnista uhat (Mitä voi tapahtua?): Mietin "worst case scenario" -tilanteita yrityksen arjessa.
+Tunnista uhat (Mitä voi tapahtua?): Mietin "worst case scenario" -tilanteita yrityksen arjessa.
       Esimerkki: "Seppo käyttää samaa salasanaa Facebookissa ja yrityksen sähköpostissa. Jos Facebook-tunnus vuotaa, hakkeri pääsee yrityksen sähköpostiin."
       Esimerkki: "Asiakas tulee toimistolle, yhdistää saastuneen koneensa Wi-Fiin ja kiristyshaittaohjelma leviää Annen koneelle."
 
-* Luo riskimatriisi: Arvioi uhat asteikolla 1–5.
+Luo riskimatriisi: Arvioi uhat asteikolla 1–5.
 
 | Uhka | Todennäköisyys (1-5) | Vaikuttavuus (1-5) | Toimenpide |
 | ---- | -------------------- | ------------------ | ---------- |
